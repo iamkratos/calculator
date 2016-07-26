@@ -3,15 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Ratings Academy | Nielsen</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
+
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -19,11 +22,52 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="container-fluid" id="homeBanner">
+            <div class="row">
+            </div>
+        </div>
+
+        <div class="container-fluid" id="cta">
+            <div class="row">
+                <h2><em>Choose a lesson to start</em></h2>
+            </div>
+        </div>
+
+        <div class="container" id="cardsContainer">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel" id="introCard">
+                        <div class="panel-heading"><h3>Introduction</h3></div>
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae magni atque voluptatibus ipsum fugiat, nihil magnam dolores blanditiis quis totam ratione molestias suscipit fuga, incidunt omnis, numquam ex eligendi eum.</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel" id="mediaCard">
+                        <a href="media.html"><div class="panel-heading"><h3>Media Overview</h3></div></a>
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae magni atque voluptatibus ipsum fugiat, nihil magnam dolores blanditiis quis totam ratione molestias suscipit fuga, incidunt omnis, numquam ex eligendi eum.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel" id="ratingsCard">
+                        <div class="panel-heading"><h3>What are "ratings"</h3></div>
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae magni atque voluptatibus ipsum fugiat, nihil magnam dolores blanditiis quis totam ratione molestias suscipit fuga, incidunt omnis, numquam ex eligendi eum.</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel" id="strategyCard">
+                        <div class="panel-heading"><h3>Nielsen Measurement Strategy</h3></div>
+                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae magni atque voluptatibus ipsum fugiat, nihil magnam dolores blanditiis quis totam ratione molestias suscipit fuga, incidunt omnis, numquam ex eligendi eum.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

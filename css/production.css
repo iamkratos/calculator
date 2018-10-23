@@ -707,6 +707,86 @@ textarea {
 }
 
 body {
-  background: blue; }
+  background: #003d5b; }
+
+button {
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s; }
+  button:active, button:focus {
+    border: 0px;
+    outline: 0;
+    opacity: 0.7; }
+
+.page-wrap {
+  display: flex;
+  height: 100vh; }
+  .page-wrap .calculator {
+    max-width: 320px;
+    width: 100%;
+    border: 1px solid #222;
+    margin: 0 auto;
+    align-self: center;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    -webkit-transition: 0.25s;
+    transition: 0.25s; }
+    @media (min-width: 992px) {
+      .page-wrap .calculator {
+        max-width: 400px; } }
+    .page-wrap .calculator:hover {
+      -webkit-box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2); }
+    .page-wrap .calculator .calculator-display {
+      background-color: #222;
+      padding: 15px 15px; }
+      .page-wrap .calculator .calculator-display .current-value {
+        color: #fff;
+        font-size: 32px;
+        text-align: right; }
+    .page-wrap .calculator .calculator-key-wrap {
+      display: flex;
+      flex-wrap: wrap; }
+      .page-wrap .calculator .calculator-key-wrap .operator-wrap {
+        display: flex;
+        flex: 1 1 100%; }
+        .page-wrap .calculator .calculator-key-wrap .operator-wrap .operator {
+          flex: 1;
+          text-align: center;
+          font-size: 21px;
+          padding: 15px 20px;
+          border-left: 0px;
+          border: none;
+          color: #fff;
+          background-color: #d1495b;
+          -moz-transition: 0.25s;
+          -o-transition: 0.25s;
+          -webkit-transition: 0.25s;
+          transition: 0.25s; }
+          .page-wrap .calculator .calculator-key-wrap .operator-wrap .operator:active, .page-wrap .calculator .calculator-key-wrap .operator-wrap .operator:focus, .page-wrap .calculator .calculator-key-wrap .operator-wrap .operator.is-pressed {
+            opacity: 0.7;
+            outline: 0; }
+      .page-wrap .calculator .calculator-key-wrap .number-button-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 75%; }
+        .page-wrap .calculator .calculator-key-wrap .number-button-wrap button {
+          flex: 1 1 30%;
+          padding: 15px;
+          border: 0px;
+          background-color: #30638e;
+          color: #fff;
+          font-size: 19px;
+          font-weight: 100; }
+      .page-wrap .calculator .calculator-key-wrap .calculates-wrap {
+        flex: 1 1 25%; }
+        .page-wrap .calculator .calculator-key-wrap .calculates-wrap button {
+          width: 100%;
+          height: 100%;
+          background-color: #edae49;
+          color: #fff;
+          font-size: 30px;
+          border: 0px; }
 
 /*# sourceMappingURL=styles.css.map */

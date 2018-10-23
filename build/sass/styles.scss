@@ -1,3 +1,131 @@
+@mixin bp($point) {
+	$small: '(min-width: 767px)';
+	$medium: '(min-width: 992px)';
+	$large: '(min-width: 1200px)';
+	$xl: '(min-width: 1800px)';
+
+	@if $point == small {
+		@media #{$small} {
+			@content;
+		}
+	} @else if $point == medium {
+		@media #{$medium} {
+			@content;
+		}
+	} @else if $point == large {
+		@media #{$large} {
+			@content;
+		}
+	} @else if $point == xl {
+		@media #{$xl} {
+			@content;
+		}
+	}
+}
+
+@mixin transition($transition) {
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
 body {
-	background: blue;
+	background: #003d5b;
+}
+
+button {
+	@include transition(0.25s);
+	&:active,
+	&:focus {
+		border: 0px;
+		outline: 0;
+		opacity: 0.7;
+	}
+}
+
+.page-wrap {
+	display: flex;
+	height: 100vh;
+	.calculator {
+		max-width: 320px;
+		width: 100%;
+		border: 1px solid #222;
+		margin: 0 auto;
+		align-self: center;
+		@include transition(0.25s);
+		@include bp(medium) {
+			max-width: 400px;
+		}
+		&:hover {
+			-webkit-box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+				0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+			box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+				0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+		}
+
+		.calculator-display {
+			background-color: #222;
+			padding: 15px 15px;
+			.current-value {
+				color: #fff;
+				font-size: 32px;
+				text-align: right;
+			}
+		}
+
+		.calculator-key-wrap {
+			display: flex;
+			flex-wrap: wrap;
+			.operator-wrap {
+				display: flex;
+				flex: 1 1 100%;
+				.operator {
+					flex: 1;
+					text-align: center;
+					font-size: 21px;
+					padding: 15px 20px;
+					border-left: 0px;
+					border: none;
+					color: #fff;
+					background-color: #d1495b;
+					@include transition(0.25s);
+
+					&:active,
+					&:focus,
+					&.is-pressed {
+						opacity: 0.7;
+						outline: 0;
+					}
+				}
+			}
+
+			.number-button-wrap {
+				display: flex;
+				flex-wrap: wrap;
+				flex: 1 1 75%;
+				button {
+					flex: 1 1 30%;
+					padding: 15px;
+					border: 0px;
+					background-color: #30638e;
+					color: #fff;
+					font-size: 19px;
+					font-weight: 100;
+				}
+			}
+
+			.calculates-wrap {
+				flex: 1 1 25%;
+				button {
+					width: 100%;
+					height: 100%;
+					background-color: #edae49;
+					color: #fff;
+					font-size: 30px;
+					border: 0px;
+				}
+			}
+		}
+	}
 }

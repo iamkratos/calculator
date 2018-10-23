@@ -1,6 +1,6 @@
 # Calculator
 
-I started by adding event listeners to all of the buttons. When each is clicked, it gets run through a function that's mostly a bunch of if/else statement that define what type of button it is, followed by the respective logic.
+I started by adding event listeners to all of the buttons. When each is clicked, it gets run through a function that's mostly a bunch of if/else statements that define what type of button it is, followed by the respective logic.
 
 If it's a number, it either replaces the zero, or appends the number to the main input
 
